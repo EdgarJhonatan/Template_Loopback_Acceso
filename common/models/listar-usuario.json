@@ -1,0 +1,37 @@
+{
+    "name": "listarUsuario",
+    "plural": "listarUsuario",
+    "base": "Model",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "hidden": [
+        "id"
+    ],
+    "properties": {
+        "nombre": {
+            "type": "string",
+            "default": "Edgar"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {
+        "listarGet": {
+            "accepts": [{
+                "arg": "nombre",
+                "type": "string",
+                "required": true
+            }],
+            "returns": {
+                "root": true
+            },
+            "http": {
+                "path": "/",
+                "verb": "get"
+            }
+        }
+    }
+}
